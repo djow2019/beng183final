@@ -1,9 +1,9 @@
 # Introduction to Machine Learning
 
 *   [Overview](#overview)
-*   [Image Classification](#image)
-*   [Hierarchical Clustering](#hierarchical)
-*   [K-Means Clustering](#k-Means)
+*   [Image Classification](#image-classification)
+*   [Hierarchical Clustering](#hierarchical-clustering)
+*   [K-Means Clustering](#k-Means-clustering)
 *   [Summary](#summary)
 
 * * *
