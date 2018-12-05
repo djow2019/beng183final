@@ -5,7 +5,7 @@
 *   [Machine Learning in Bioinformatics](#machine-learning-in-bioinformatics)
 *   [Distance Functions](#distance-functions)
 *   [Hierarchical Clustering](#hierarchical-clustering)
-*   [K-Means Clustering](#k-Means-clustering)
+*   [K-Means Clustering](#k-means-clustering)
 *   [Summary](#summary)
 
 * * *
@@ -55,7 +55,7 @@ classification and clustering may give different results based on the input data
 There are many applications of machine learning in bioinformatics. Machine learning algorithms are
 used in image classification, detecting variation in rare diseases, and computing phylogenetic trees. In
 **biomedical informatics**, we see machine learning used in **precision medicine**. The general
-idea of precision medicine is to make disease predictions based on an individual'said
+idea of precision medicine is to make disease predictions based on an individual's
 genomic or transcriptomic (RNA-Seq) data. We can use this **personalized** information to
 predict potential cancer-causing genes or discover subtypes of a disease.
 
@@ -98,17 +98,57 @@ The following is the general procedure of a hierarchical clustering algorithm:
 
 ![Hierarchical Clustering Animation](img/hClust.gif)
 
+In hierarchical clustering, you have several clustering methods that each use a 
+different distance function:
+1. Unweighted Pair Group Method (UPGMA) - Calculates the average distance from each point in
+the cluster to all other points in another cluster
+2. Single Linkage - Measures dissimilarity between two clusters as the minimum
+dissimilarity between members of the two clusters
+3. Complete Linkage - Measures dissimilarity between two clusters as the greatest
+dissimilarity between members of the two clusters
+
 * * *
 
 ## K-Means Clustering
 
-In K-Means
+In **K-Means clustering**, we compute groups by minimizing the distance of each point to
+to its group's **mean**. Unlike hierarchical clustering, k-means clustering must arbitrarily
+choose **k**, the number of clusters, and consequently select k points to serve as the initial
+**means** for each cluster. At each iteration, we continuously reassign points such that they are grouped
+with the clusters that minimize the point's distance to the cluster's mean.
 
 ![K-Means Clustering](img/kImg.png)
 
+The following is the general procedure of the k-means clustering algorithm:
+1. Select the number of clusters K
+2. Select the K starting points to serve as the initial cluster means
+3. Iterate through each point and calculate the distance between the datum and each cluster's mean
+4. Assign the datum to the cluster whose mean is closest to that point
+5. Repeat steps 3 and 4 until **convergence** - when points are no longer reassigned
+
 ![K-Means Clustering](img/kClust.gif)
+
+Note that K-Means clustering **does not always guarantee** termination. An upper bound for the number of iterations
+should be assigned to prevent infinite loops. Additionally, the selection of the initial points can
+**change the outcome**. Perhaps the selection of the initial points should be given careful
+consideration rather than an arbitrary choosing.
+
 * * *
 
 ## Summary
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Machine Learning is perhaps the greatest export of computing to biology. Any algorithm that 
+classifies or categorizes data utilizes some form of machine learning. In computer science, we see
+machine learning in image classification and recommender systems. In bioinformatics,
+machine learning tackles important medical problems such as categorizing patients into
+subtypes of a disease or detecting genes responsible for pathology. In the future, machine learning
+will become an essential component of bioinformatics as we aggregate more and more
+biological data. Machine learning helps us deal with the information explosion of the 21st century and will
+lay the foundation for precision medicine and gene-function discovery.
+
+* * * 
+
+## Sources
+1. Sheng Zhong BENG 183
+2. Victoria Tom, Joey Sun BENG 183
+3. https://dashee87.github.io/data%20science/general/Clustering-with-Scikit-with-GIFs/
