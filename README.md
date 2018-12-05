@@ -38,7 +38,7 @@ The second domain of machine learning is continuous vs discrete. **Continuous** 
 have outputs on continuous, or flowing, spectrum. **Discrete** algorithms produce information in
 distinct, well-defined buckets. 
 
-![Supervised/Unsupervised Continuous/Discrete example](img/examples.png)
+![Supervised/Unsupervised Continuous/Discrete example](img/examples.PNG)
 
 Lastly, a machine learning algorithm could be classifying or clustering. Classification and clustering
 algorithms often answer the same question, but differ in their implementations. In general,
